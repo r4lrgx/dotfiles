@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# ~/.local/bin
+
+updates=$(dnf check-update 2>/dev/null | grep -c '^[a-zA-Z0-9]')
+
+if [ "$updates" -gt 0 ]; then
+    echo "$updates"
+else
+    echo "0"
+fi

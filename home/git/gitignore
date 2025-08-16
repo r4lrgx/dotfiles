@@ -1,0 +1,243 @@
+# This gitignore is a combination of the many templates available at github/gitignore
+# For the complete collection, please refer to the full template: https://github.com/github/gitignore
+#
+# Linux files
+*~
+
+# OS files (macOS, Windows)
+# https://apple.stackexchange.com/questions/52239/what-is-ds-store
+.DS_Store
+Thumbs.db
+
+# General local
+*.local
+
+# General temp files and system artifacts
+.fuse_hidden*
+.directory
+.nfs*
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+# Logs and temp files (general)
+*.temp
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# Cache and build output (common folders)
+# https://git-scm.com/docs/gitignore
+.rts2_cache_*/
+.parcel-cache/
+.nyc_output/
+.cache/
+
+coverage/
+lib-cov/
+target/
+build/
+dist/
+out/
+
+*.rpt2_cache*/
+*.tsbuildinfo
+
+# Environment files (dotenv and secrets)
+# https://github.com/motdotla/dotenv
+.env.*
+.env
+
+*.pem
+*.key
+*.crt
+
+# Editor and IDE folders (VSCode, JetBrains, Sublime)
+# https://code.visualstudio.com/docs/getstarted/settings
+*.code-workspace
+
+.snapshots/*
+.history/
+.idea/
+
+.vscode/
+!.vscode/*.code-snippets
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/tasks.json
+
+# Python
+
+# Python cache and build files
+# https://docs.python.org/3/library/__pycache__.html
+__pycache__/
+
+*.py[cod]
+*.pyd
+
+# Virtual environments
+venv/
+ENV/
+
+.venv/
+.env/
+
+# Packaging and build artifacts
+pip-wheel-metadata/
+build/
+dist/
+
+*.egg-info/
+
+.eggs/
+
+# Miscellaneous Python files
+.ipynb_checkpoints
+.python-version
+
+# Go
+# Binaries and package files
+pkg/
+
+# Build/test artifacts
+*.test
+*.exe
+*.out
+
+# Node.js / JavaScript / TypeScript
+
+# Dependency directories
+node_modules/
+
+# npm/yarn/pnpm logs and cache
+.pnpm-debug.log*
+
+yarn-debug.log*
+yarn-error.log*
+npm-debug.log*
+
+# Yarn PnP files
+.pnp.*
+.pnp/
+
+# Build output and framework-specific directories
+.svelte-kit/
+.serverless/
+.tern-port/
+.dynamodb/
+.fusebox/
+.webpack/
+.gatsby/
+.next/
+.nuxt/
+
+# Yarn cache and build states
+.yarn/install-state.gz
+.yarn/build-state.yml
+.yarn/unplugged/
+.yarn/cache/
+
+# TypeScript cache files
+*.tsbuildinfo
+
+# NPM cache dir
+.npm
+
+# Eslint cache
+.eslintcache
+
+# Stylelint cache
+.stylelintcache
+
+# Microbundle cache
+.rts2_cache_cjs/
+.rts2_cache_umd/
+.rts2_cache_es/
+.rpt2_cache/
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variable files (already listed above)
+# .env, .env.*
+
+# Rust
+# Cargo build output
+/target/
+
+# Backup files
+**/*.rs.bk
+
+# C / C++ / Obj-C
+# Compiled object files
+*.o
+*.obj
+
+# Shared libraries and executables
+*.so
+*.app
+
+# Debug symbols
+*.dSYM/
+
+# Microsoft Visual Studio files
+*.ilk
+*.pdb
+*.idb
+
+# Miscellaneous binaries
+*.class
+
+# React and frontend assets
+**/*.backup.*
+**/*.back.*
+
+.DS_*
+
+psd
+thumb
+sketch
+
+# Archives
+# It's better to unpack these files and commit the raw source because
+# git has its own built in compression methods.
+*.7z
+*.jar
+*.rar
+*.zip
+*.gz
+*.gzip
+*.bzip
+*.bzip2
+*.bz2
+*.xz
+*.lzma
+*.cab
+*.xar
+*.zst
+*.tzst
+
+# Packing-only formats
+*.iso
+*.tar
+
+# Package management formats
+*.dmg
+*.xpi
+*.gem
+*.egg
+*.deb
+*.rpm
+*.msi
+*.msm
+*.msp
+*.txz

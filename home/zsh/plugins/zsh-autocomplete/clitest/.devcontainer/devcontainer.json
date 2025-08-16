@@ -1,0 +1,17 @@
+// https://aka.ms/devcontainer.json
+{
+    "name": "clitest dev",
+    //
+    // https://github.com/aureliojargas/devcontainer
+    "image": "ghcr.io/aureliojargas/devcontainer",
+    //
+    // https://aka.ms/vscode-remote/containers/non-root
+    "remoteUser": "vscode",
+    //
+    // https://github.com/devcontainers/features/tree/main/src
+    "features": {
+        "github-cli": "latest",
+        // Makefile commands are run inside the clitest-dev Docker container
+        "docker-in-docker": "latest"
+    }
+}

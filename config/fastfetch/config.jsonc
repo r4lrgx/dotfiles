@@ -1,0 +1,139 @@
+{
+ "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+
+ "logo": {
+  "padding": {
+   "top": 1,
+   "right": 3,
+   "left": 1
+  }
+ },
+ "display": {
+  "separator": ": "
+ },
+
+ "modules": [
+  // Title
+  {
+   "type": "title",
+   "fqdn": false,
+   "key": "@",
+   "keyColor": "#9b59b6",
+   "color": {
+    "user": "white",
+    "at": "white",
+    "host": "white"
+   }
+  },
+  "separator",
+
+  // System
+  {
+   "type": "os",
+   "keyColor": "#9b59b6",
+   "outputColor": "#99ffff",
+   "format": ""
+  },
+  {
+   "type": "host",
+   "keyColor": "#a95dc4",
+   "outputColor": "#66ffff"
+  },
+  {
+   "type": "kernel",
+   "keyColor": "#b761d2",
+   "outputColor": "#00ffff"
+  },
+  {
+   "type": "uptime",
+   "keyColor": "#c565df",
+   "outputColor": "#11f7ff"
+  },
+  {
+   "type": "packages",
+   "keyColor": "#d369ed",
+   "outputColor": "#22edff"
+  },
+
+  // Hardware
+  {
+   "type": "cpu",
+   "temp": true,
+   "keyColor": "#e056fd",
+   "outputColor": "#33e3ff"
+  },
+  {
+   "type": "gpu",
+   "temp": true,
+   "keyColor": "#da63f8",
+   "outputColor": "#44d9ff"
+  },
+  {
+   "type": "memory",
+   "keyColor": "#d470f3",
+   "outputColor": "#55cfff",
+   "percent": {
+    "type": ["bar", "bar-monochrome", "num", "num-color"],
+    "green": 50,
+    "yellow": 80
+   }
+  },
+  {
+   "type": "swap",
+   "keyColor": "#ce7dee",
+   "outputColor": "#67c5ff"
+  },
+  {
+   "type": "disk",
+   "keyColor": "#c88ae9",
+   "outputColor": "#79bbff",
+   "folders": "/"
+  },
+
+  // Environment
+  {
+   "type": "shell",
+   "keyColor": "#b397f2",
+   "outputColor": "#8bb1ff"
+  },
+  {
+   "type": "terminal",
+   "keyColor": "#9ea4fb",
+   "outputColor": "#9ea4fb"
+  },
+  {
+   "type": "wm",
+   "keyColor": "#67c5ff",
+   "outputColor": "#ce7dee"
+  },
+  {
+   "type": "display",
+   "keyColor": "#00ffff",
+   "outputColor": "#b761d2",
+   "preciseRefreshRate": false
+  },
+
+  // Network
+  {
+   "type": "localip",
+   "keyColor": "#66ffff",
+   "outputColor": "#a95dc4"
+  },
+  {
+   "type": "publicip",
+   "keyColor": "#99ffff",
+   "outputColor": "#9b59b6"
+  },
+
+  // Locale
+  {
+   "type": "locale",
+   "keyColor": "#ccffff",
+   "outputColor": "#9b59b6"
+  },
+
+  // Colors preview
+  "break",
+  "colors"
+ ]
+}

@@ -1,0 +1,26 @@
+$ cd /tmp
+$ url="https://fossies.org/linux/privat/txt2tags-2.6.tgz"
+$ curl -O -s -S "$url"                     # download
+$ du -h txt2tags-2.6.tgz                   # verify size
+532K	txt2tags-2.6.tgz
+$ tar tzf txt2tags-2.6.tgz | sed -n '$='   # verify number of files
+545
+$ tar xzf txt2tags-2.6.tgz                 # extract
+$ cd txt2tags-2.6
+$ ls -1F                                   # list contents
+COPYING
+ChangeLog
+README
+doc/
+extras/
+po/
+samples/
+test/
+txt2tags*
+$ ./txt2tags -V                            # test execution
+txt2tags version 2.6 <http://txt2tags.org>
+$ test -d ~/bin || mkdir ~/bin             # create folder if needed
+$ cp txt2tags ~/bin/                       # install to user folder
+$ ~/bin/txt2tags -V                        # final test
+txt2tags version 2.6 <http://txt2tags.org>
+$

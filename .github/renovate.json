@@ -1,0 +1,8 @@
+{
+ "extends": ["config:recommended"],
+ "git-submodules": {
+  "enabled": true,
+  "ignoreUnstable": true
+ },
+ "automerge": true
+}

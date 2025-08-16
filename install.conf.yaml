@@ -1,0 +1,44 @@
+- defaults:
+   link:
+    relink: true
+    force: true
+   shell:
+    stderr: true
+    stdout: true
+
+- clean: ['~']
+
+- shell:
+   - [sh pre-install.sh, 'Run pre-install setup.']
+   - [git submodule update --init --recursive, 'Init and update submodules.']
+
+- link:
+   # Git
+   ~/.gitignore: 'home/git/gitignore'
+   ~/.gitconfig: 'home/git/gitconfig'
+
+   # Config
+   ~/.config/astro: 'config/astro'
+   ~/.config/btop: 'config/btop'
+   ~/.config/fastfetch: 'config/fastfetch'
+   ~/.config/gh: 'config/gh'
+   ~/.config/go: 'config/go'
+   ~/.config/nextjs-nodejs: 'config/nextjs-nodejs'
+   ~/.config/nvim: 'config/nvim'
+   ~/.config/turborepo: 'config/turborepo'
+
+   # Zsh
+   ~/.oh-my-zsh/custom/plugins:
+    glob: true
+    path: 'home/zsh/plugins/*'
+   ~/.oh-my-zsh/custom/themes/powerlevel10k:
+    path: 'home/zsh/theme/powerlevel10k'
+   ~/.p10k.zsh:
+    path: 'home/zsh/theme/p10k'
+   ~/.zshrc:
+    path: 'home/zsh/zshrc'
+
+   # Fonts
+   ~/.local/share/fonts:
+    glob: true
+    path: 'extras/fonts/*'

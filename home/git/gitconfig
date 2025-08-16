@@ -1,0 +1,104 @@
+[include]
+    path = ~/.gitconfig.local
+
+[core]
+    editor = nvim
+    excludesfile = ~/.gitignore
+    autocrlf = input
+    safecrlf = true
+    whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+
+[color]
+    ui = true
+    diff = auto
+    status = auto
+    branch = auto
+
+[color "diff"]
+    meta = 227
+    frag = magenta bold
+    commit = 227 bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
+
+[color "diff-highlight"]
+    oldNormal = red bold
+    oldHighlight = red bold 52
+    newNormal = green bold
+    newHighlight = green bold 22
+
+[color "grep"]
+    match = cyan bold
+    selected = blue
+    context = normal
+    filename = magenta
+    linenumber = green
+    separator = yellow
+    function = blue
+
+[alias]
+    co = checkout
+    br = branch
+    ci = commit
+    st = status
+    df = diff
+    lg = log --oneline --graph --decorate --all
+    ls = log --graph --pretty='%C(yellow)%h %ad%Cred%d %Creset%s%Cblue [%cn]' --abbrev-commit --date=short
+    last = log -1 HEAD
+    tree = log --oneline --decorate --graph
+    save = !git add -A && git commit -m "WIP"
+    graph = log --graph --oneline
+    amend = commit --amend
+    pullff = pull --ff-only
+    ignore = update-index --assume-unchanged
+    ignore-not = update-index --no-assume-unchanged
+    authors = shortlog -s -n -e
+    unstage = reset HEAD --
+    cleanup = "!git branch --merged | grep -v '\\*\\|master\\|main' | xargs -n 1 git branch -d"
+
+[credential "https://github.com"]
+	helper =
+	helper = !/usr/bin/gh auth git-credential
+
+[credential "https://gist.github.com"]
+	helper =
+	helper = !/usr/bin/gh auth git-credential
+
+[diff]
+    mnemonicprefix = true
+    algorithm = histogram
+    compaction = true
+    tool = vimdiff
+
+[difftool]
+    prompt = false
+
+[filter "lfs"]
+    required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+
+[grep]
+    lineNumber = true
+
+[help]
+    autocorrect = 1
+
+[hub]
+    protocol = https
+
+[mergetool]
+    keepBackup = false
+
+[pull]
+    rebase = true
+
+[push]
+    default = upstream
+
+[pretty]
+    line = "%C(auto)%h%d %s %C(yellow)by %C(blue)%an %C(green)%ar"
+    compact = "%C(auto)%h %s %C(green)%ar%n %C(auto)%d%n"
+    detail = "%C(auto)%h %s%n  %C(yellow)by %C(blue)%an %C(magenta)<%ae> [%G?] %C(green)%ar%n %C(auto)%d%n"

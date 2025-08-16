@@ -1,0 +1,106 @@
+# Background color of the terminal window (empty = default or transparent)
+theme[main_bg]=""
+
+# Main text color used throughout the UI
+theme[main_fg]="#f8f8f2"
+
+# Color used for titles and headers of boxes
+theme[title]="#f8f8f2"
+
+# Color for highlighting keyboard shortcut keys
+theme[hi_fg]="#6272a4"
+
+# Background color for the currently selected process in the process list
+theme[selected_bg]="#ff79c6"
+
+# Text color for the currently selected process in the process list
+theme[selected_fg]="#f8f8f2"
+
+# Color used for disabled or inactive text elements
+theme[inactive_fg]="#44475a"
+
+# Text color displayed on top of graphs (e.g., uptime or scaling labels)
+theme[graph_text]="#f8f8f2"
+
+# Background color behind meter bars (e.g., CPU, memory usage bars)
+theme[meter_bg]="#44475a"
+
+# Accent colors for miscellaneous elements in the process box (mini CPU graphs, memory details, status text)
+theme[proc_misc]="#bd93f9"
+
+# Outline color of the CPU usage box
+theme[cpu_box]="#bd93f9"
+
+# Outline color of the memory and disk usage boxes
+theme[mem_box]="#bd93f9"
+
+# Outline color of the network upload/download box
+theme[net_box]="#ff5555"
+
+# Outline color of the process list box
+theme[proc_box]="#8be9fd"
+
+# Color for dividing lines between boxes and for smaller lines inside boxes
+theme[div_line]="#44475a"
+
+# Gradient colors for the temperature graph:
+#   - Starts cool (purple)
+#   - Moves to warm (pink)
+#   - Ends hot (bright pink/red), indicating rising temperature
+theme[temp_start]="#bd93f9"
+theme[temp_mid]="#ff79c6"
+theme[temp_end]="#ff33a8"
+
+# Gradient colors for CPU usage graph:
+#   - Low usage: purple
+#   - Medium usage: blue
+#   - High usage: purple (looping color scheme)
+theme[cpu_start]="#bd93f9"
+theme[cpu_mid]="#8be9fd"
+theme[cpu_end]="#bd93f9"
+
+# Gradient colors for free memory/disk meter:
+#   - Starts with mauve (low free)
+#   - Moves to pink (moderate free)
+#   - Ends bright pink (high free)
+theme[free_start]="#bd93f9"
+theme[free_mid]="#ff79c6"
+theme[free_end]="#ff33a8"
+
+# Gradient colors for cached memory/disk meter:
+#   - Shades of blue indicating amount of cached memory/disk
+theme[cached_start]="#b1f0fd"
+theme[cached_mid]="#8be9fd"
+theme[cached_end]="#26d7fd"
+
+# Gradient colors for available memory/disk meter:
+#   - Starts light purple (lower availability)
+#   - Moves to medium purple (moderate availability)
+#   - Ends darker purple (high availability)
+theme[available_start]="#d9a6fa"
+theme[available_mid]="#b86cff"
+theme[available_end]="#9c33ff"
+
+# Gradient colors for used memory/disk meter:
+#   - Indicates increasing usage with deeper pink/purple hues
+theme[used_start]="#bd93f9"
+theme[used_mid]="#bd93f9"
+theme[used_end]="#ff33a8"
+
+# Gradient colors for download graph:
+#   - Represents transfer speed or amount downloaded
+theme[download_start]="#bd93f9"
+theme[download_mid]="#50fa7b"
+theme[download_end]="#8be9fd"
+
+# Gradient colors for upload graph:
+#   - Represents upload speed or amount uploaded
+theme[upload_start]="#8c42ab"
+theme[upload_mid]="#ff79c6"
+theme[upload_end]="#ff33a8"
+
+# Gradient colors for process box representing thread, memory, and CPU usage:
+#   - Shows intensity or usage levels, from lighter purple to deeper blue shades
+theme[process_start]="#bd93f9"
+theme[process_mid]="#a060c0"
+theme[process_end]="#6272a4"

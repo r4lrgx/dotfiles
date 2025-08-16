@@ -1,0 +1,114 @@
+# Load Powerlevel10k prompt from cache for quick startup
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+# Oh My Zsh
+#
+# Source the Oh My Zsh framework
+export ZSH="$HOME/.oh-my-zsh"
+
+# Theme Background
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
+# Basic Oh My Zsh Config
+#
+# Plugins
+plugins=(
+  git
+  z
+  nvm
+  npm
+  debian
+  golang
+  python
+  extract
+  command-not-found
+  zsh-autocomplete
+  zsh-syntax-highlighting
+  zsh-autosuggestions
+)
+
+# Completion & Correction
+CASE_SENSITIVE="true"
+HYPHEN_INSENSITIVE="true"
+ENABLE_CORRECTION="true"
+
+# Smart completion
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+zstyle ':completion:*' insert-tab pending
+zstyle ':omz:update' mode auto
+zstyle ':omz:update' verbose minimal
+
+# Improved history search
+autoload -U up-line-or-beginning-search down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey "^[[A" up-line-or-beginning-search
+bindkey "^[[B" down-line-or-beginning-search
+
+# Source Oh My Zsh
+source $ZSH/oh-my-zsh.sh
+
+# Environment Variables
+#
+# Default editor for Git, GH CLI, and other tools
+export EDITOR="nvim"
+export VISUAL="nvim"
+
+# PATH
+[ ! -d "$HOME/.local/bin" ] && mkdir -p "$HOME/.local/bin"
+[[ ":$PATH:" != *":$HOME/.local/bin:"* ]] && export PATH="$HOME/.local/bin:$PATH"
+
+# Go
+export GOPATH="$HOME/go"
+export GOBIN="$GOPATH/bin"
+export PATH="$PATH:$GOBIN"
+export GO111MODULE="on"
+export GOCACHE="$HOME/.cache/go-build"
+export GOTMPDIR="$HOME/.tmp/go-build"
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+nvm use --lts &>/dev/null
+
+# GPG-key for Git commits
+export GPG_TTY=$(tty)
+
+# Corepack for package managers
+export COREPACK_ENABLE_STRICT=0
+
+# Aliases
+#
+# Clear commands
+alias cls='clear'
+alias clean='clear'
+alias purge='clear'
+
+# Listing
+alias ll='ls -lah --color=auto'
+
+# Windows WSL
+alias winx='cd /mnt/c/Users/$(cmd.exe /C "echo %USERNAME%" 2>/dev/null | tr -d "\r")'
+
+# Go tools
+alias goclean="go clean && go clean -modcache && rm -rf $GOCACHE"
+alias gopurge="go clean && go clean -modcache && rm -rf $GOCACHE"
+alias gocls="go clean && go clean -modcache && rm -rf $GOCACHE"
+
+# Modern alternatives
+alias neofetch="fastfetch"
+
+# Tool Integrations
+#
+# GitHub CLI Completions
+eval "$(gh completion --shell zsh)"
+
+# Atuin (better history)
+[ -f "$HOME/.atuin/bin/env" ] && source "$HOME/.atuin/bin/env"
+eval "$(atuin init zsh)" # or zsh --disable-up-arrow
+
+# My theme settings from `p10k configure`, which can also be edited in the ~/.p10k.zsh file.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

@@ -1,0 +1,20 @@
+[submodule "dotbot"]
+	path = dotbot
+	url = https://github.com/anishathalye/dotbot
+	ignore = dirty
+[submodule "home/zsh/plugins/zsh-autocomplete"]
+	path = home/zsh/plugins/zsh-autocomplete
+	url = https://github.com/marlonrichert/zsh-autocomplete.git
+	ignore = dirty
+[submodule "home/zsh/plugins/zsh-autosuggestions"]
+	path = home/zsh/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions.git
+	ignore = dirty
+[submodule "home/zsh/plugins/zsh-syntax-highlighting"]
+	path = home/zsh/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+	ignore = dirty
+[submodule "home/zsh/theme/powerlevel10k"]
+	path = home/zsh/theme/powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k.git
+	ignore = dirty
