@@ -47,7 +47,7 @@ exec zsh
 - `home/` – Dotfiles for the home directory:
   - `bin/` – Handy scripts to improve productivity.
   - `git/` – [Git](https://git-scm.com/) configuration + aliases (with some extras).
-- `zsh/` – [Zsh](https://www.zsh.org/) configured with [Oh My Zsh](https://ohmyz.sh/), featuring custom aliases and tweaks for development environments like [Go](https://go.dev/), [Node.js](https://nodejs.org/), and more.
+- `zsh/` – [Zsh](https://www.zsh.org/) configured with [Oh My Zsh](https://ohmyz.sh/), featuring custom aliases and tweaks for dev-env like [Go](https://go.dev/), [Node.js](https://nodejs.org/), and more.
   - `plugins/` – Extra Zsh plugins for an improved shell experience:
     - [`zsh-autocomplete/`](https://github.com/marlonrichert/zsh-autocomplete) – Adds real-time and context-aware command autocompletion.
     - [`zsh-autosuggestions/`](https://github.com/zsh-users/zsh-autosuggestions) – Suggests commands as you type based on history and usage.
