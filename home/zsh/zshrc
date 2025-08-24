@@ -60,13 +60,16 @@ export VISUAL="nvim"
 [ ! -d "$HOME/.local/bin" ] && mkdir -p "$HOME/.local/bin"
 [[ ":$PATH:" != *":$HOME/.local/bin:"* ]] && export PATH="$HOME/.local/bin:$PATH"
 
-# Go
+# Go env
 export GOPATH="$HOME/go"
 export GOBIN="$GOPATH/bin"
-export PATH="$PATH:$GOBIN"
-export GO111MODULE="on"
 export GOCACHE="$HOME/.cache/go-build"
 export GOTMPDIR="$HOME/.tmp/go-build"
+export GO111MODULE="on"
+
+# PATH
+export PATH="$PATH:$GOBIN"
+export PATH="$PATH:/var/lib/snapd/snap/bin"
 
 # NVM
 export NVM_DIR="$HOME/.nvm"

@@ -1,4 +1,71 @@
 {
+ // General
+ //
+ // Editor
+ "editor.formatOnSave": true,
+ "editor.defaultFormatter": "ms-python.black-formatter",
+ "editor.cursorBlinking": "expand",
+ "editor.cursorSmoothCaretAnimation": "on",
+ "editor.cursorWidth": 3,
+ "editor.cursorStyle": "line",
+ "editor.inlayHints.enabled": "on",
+ "editor.stickyScroll.enabled": true,
+ "editor.inlineSuggest.enabled": true,
+ "editor.guides.bracketPairs": true,
+ "editor.linkedEditing": true,
+ "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+ "editor.minimap.enabled": false,
+ "editor.codeActionsOnSave": {
+  "source.fixAll": "never",
+  "source.organizeImports": "never"
+ },
+
+ // Explorer
+ "explorer.compactFolders": false,
+
+ // Security
+ "security.workspace.trust.untrustedFiles": "open",
+ "security.allowedUNCHosts": ["wsl.localhost"],
+
+ // Productivity
+ //
+ // Git
+ "git.autofetch": true,
+ "git.pullBeforeCheckout": true,
+ "git.enableSmartCommit": true,
+ "git.confirmSync": false,
+ "git.ignoreMissingGitWarning": true,
+
+ // Files
+ "files.trimTrailingWhitespace": true,
+ "files.insertFinalNewline": true,
+ "files.autoSave": "off",
+
+ // Workbench/UI
+ "workbench.iconTheme": "material-icon-theme",
+ "workbench.colorTheme": "01e61500-862c-41cd-b653-48d2ef7b1882",
+ "workbench.startupEditor": "none",
+ "workbench.editor.pinnedTabsOnSeparateRow": true,
+ "workbench.editor.enablePreview": false,
+
+ // Terminal
+ "terminal.integrated.stickyScroll.enabled": true,
+ "terminal.integrated.scrollback": 10000,
+ "terminal.integrated.cursorStyle": "line",
+ "terminal.integrated.cursorWidth": 2,
+ "terminal.integrated.tabs.focusMode": "singleClick",
+
+ // Debug
+ "debug.inlineValues": "on",
+ "debug.openDebug": "neverOpen",
+
+ // Extensions
+ //
+ // VScord
+ // "vscord.status.details.text.editing": "In CLI {problems}",
+ // "vscord.status.details.text.viewing": "In CLI {problems}",
+ // "vscord.status.state.text.debugging": "Debugging: CLI",
+
  // Error Lens
  "errorLens.codeLensTemplate": "$severity $message",
  "errorLens.fontWeight": "bold",
@@ -19,6 +86,9 @@
  // Theme
  "doki.wallpaper.enabled": true,
 
+ // GitHub Actions
+ "github-actions.remote-name": "origin",
+
  // Image Preview
  "gutterpreview.enableReferenceLookup": true,
 
@@ -27,63 +97,10 @@
  "intellicodeApiExamples.python.enabled": true,
  "intellicodeCompletions.parseErrorFilter": true,
 
+ // NPM Intellisense
+ "npm-intellisense.importES6": true,
+
  // Path Intellisense
  "path-intellisense.autoSlashAfterDirectory": true,
- "path-intellisense.showHiddenFiles": true,
-
- // VScord
- // "vscord.status.details.text.editing": "In CLI-PY {problems}",
- // "vscord.status.details.text.viewing": "In CLI-PY {problems}",
- // "vscord.status.state.text.debugging": "Debugging: CLI-PY",
-
- // Git
- "git.autofetch": true,
- "git.pullBeforeCheckout": true,
- "git.enableSmartCommit": true,
- "git.confirmSync": false,
- "git.ignoreMissingGitWarning": true,
-
- // Editor
- "editor.defaultFormatter": "ms-python.black-formatter",
- "editor.formatOnSave": true,
- "editor.cursorBlinking": "expand",
- "editor.cursorSmoothCaretAnimation": "on",
- "editor.inlayHints.enabled": "on",
- "editor.cursorWidth": 3,
- "editor.guides.bracketPairs": true,
- "editor.linkedEditing": true,
- "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
- "editor.minimap.enabled": false,
- "editor.cursorStyle": "line",
- "editor.stickyScroll.enabled": true,
- "editor.inlineSuggest.enabled": true,
- "editor.codeActionsOnSave": {
-  "source.fixAll": "always",
-  "source.organizeImports": "always"
- },
-
- // Workbench/UI
- "workbench.iconTheme": "material-icon-theme",
- "workbench.colorTheme": "01e61500-862c-41cd-b653-48d2ef7b1882",
- "workbench.startupEditor": "none",
- "workbench.editor.pinnedTabsOnSeparateRow": true,
- "workbench.editor.enablePreview": false,
-
- // Files
- "files.trimTrailingWhitespace": true,
- "files.insertFinalNewline": true,
- "files.autoSave": "onFocusChange",
-
- // Terminal
- "terminal.integrated.stickyScroll.enabled": true,
- "terminal.integrated.cursorStyle": "line",
- "terminal.integrated.cursorWidth": 2,
- "terminal.integrated.tabs.focusMode": "singleClick",
-
- // Explorer
- "explorer.compactFolders": false,
-
- // Debug
- "debug.inlineValues": "on",
- "debug.openDebug": "neverOpen"
+ "path-intellisense.showHiddenFiles": true
 }

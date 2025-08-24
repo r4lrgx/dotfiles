@@ -1,116 +1,22 @@
 {
- // Error Lens
- "errorLens.codeLensTemplate": "$severity $message",
- "errorLens.fontWeight": "bold",
- "errorLens.gutterIconsEnabled": true,
- "errorLens.enabledDiagnosticLevels": ["error", "warning"],
-
- // Icon Theme
- "material-icon-theme.activeIconPack": "react",
- "material-icon-theme.files.color": "#90a4ae",
- "material-icon-theme.enableLogging": true,
- "material-icon-theme.folders.color": "#90a4ae",
-
- // WSL
- "remote.WSL.debug": false,
- "remote.WSL.fileWatcher.polling": true,
- "remote.WSL.fileWatcher.pollingInterval": 5000,
-
- // Astro
- "astro.updateImportsOnFileMove.enabled": true,
-
- // Theme
- "doki.wallpaper.enabled": true,
-
- // Go
- "go.formatTool": "goimports",
- "go.lintTool": "golangci-lint",
- "go.lintOnSave": "package",
- "go.useLanguageServer": true,
- "go.inlayHints.parameterNames": true,
- "go.inlayHints.functionTypeParameters": true,
- "go.testOnSave": false,
-
- // Image Preview
- "gutterpreview.enableReferenceLookup": true,
-
- // IntelliCode
- "vsintellicode.python.completionsEnabled": true,
- "intellicodeApiExamples.python.enabled": true,
- "intellicodeCompletions.parseErrorFilter": true,
-
- // NPM Intellisense
- "npm-intellisense.importES6": true,
-
- // Path Intellisense
- "path-intellisense.autoSlashAfterDirectory": true,
- "path-intellisense.showHiddenFiles": true,
-
- // VScord
- // "vscord.status.details.text.editing": "In CLI {problems}",
- // "vscord.status.details.text.viewing": "In CLI {problems}",
- // "vscord.status.state.text.debugging": "Debugging: CLI",
-
- // Prettier
- "prettier.printWidth": 500000,
- "prettier.tabWidth": 1,
- "prettier.useTabs": false,
- "prettier.semi": true,
- "prettier.singleQuote": true,
- "prettier.jsxSingleQuote": false,
- "prettier.trailingComma": "es5",
- "prettier.bracketSpacing": true,
- "prettier.bracketSameLine": false,
- "prettier.arrowParens": "always",
- "prettier.quoteProps": "as-needed",
- "prettier.singleAttributePerLine": true,
- "prettier.proseWrap": "preserve",
- "prettier.htmlWhitespaceSensitivity": "css",
- "prettier.vueIndentScriptAndStyle": false,
- "prettier.embeddedLanguageFormatting": "auto",
-
- // TailwindCSS Intellisense
- "tailwindCSS.emmetCompletions": true,
-
- // Git
- "git.autofetch": true,
- "git.pullBeforeCheckout": true,
- "git.enableSmartCommit": true,
- "git.confirmSync": false,
- "git.ignoreMissingGitWarning": true,
-
- // Javascript
- "javascript.preferences.useAliasesForRenames": false,
- "javascript.suggest.autoImports": true,
- "javascript.updateImportsOnFileMove.enabled": "always",
- "javascript.inlayHints.parameterNames.enabled": "all",
- "javascript.inlayHints.variableTypes.enabled": true,
- "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
-
- // Typescript
- "typescript.inlayHints.enumMemberValues.enabled": true,
- "typescript.inlayHints.parameterNames.enabled": "all",
- "typescript.inlayHints.variableTypes.enabled": true,
- "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
- "typescript.suggest.autoImports": true,
- "typescript.updateImportsOnFileMove.enabled": "always",
-
+ // General
+ //
  // Editor
  "editor.formatOnSave": true,
  "editor.cursorBlinking": "expand",
  "editor.cursorSmoothCaretAnimation": "on",
- "editor.inlayHints.enabled": "on",
  "editor.cursorWidth": 3,
+ "editor.cursorStyle": "line",
+ "editor.inlayHints.enabled": "on",
+ "editor.stickyScroll.enabled": true,
+ "editor.inlineSuggest.enabled": true,
  "editor.guides.bracketPairs": true,
  "editor.linkedEditing": true,
  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
  "editor.minimap.enabled": false,
- "editor.cursorStyle": "line",
- "editor.stickyScroll.enabled": true,
- "editor.inlineSuggest.enabled": true,
  "editor.codeActionsOnSave": {
-  "source.fixAll": "always",
-  "source.organizeImports": "always"
+  "source.fixAll": "never",
+  "source.organizeImports": "never"
  },
  "[javascript]": {
   "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -130,6 +36,9 @@
  "[jsonc]": {
   "editor.defaultFormatter": "esbenp.prettier-vscode"
  },
+ "[json5]": {
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+ },
  "[jsonl]": {
   "editor.defaultFormatter": "esbenp.prettier-vscode"
  },
@@ -146,6 +55,67 @@
   "editor.defaultFormatter": "golang.go"
  },
 
+ // General
+ "window.newWindowProfile": "Predeterminado",
+
+ // Explorer
+ "explorer.compactFolders": false,
+
+ // Security
+ "security.workspace.trust.untrustedFiles": "open",
+ "security.allowedUNCHosts": ["wsl.localhost"],
+
+ // Langs
+ //
+ // Typescript Server
+ "typescript.tsserver.maxTsServerMemory": 4096,
+ "typescript.tsserver.log": "off",
+ "typescript.tsserver.experimental.enableProjectDiagnostics": false,
+ "typescript.tsserver.watchOptions": {
+  "watchFile": "useFsEvents",
+  "watchDirectory": "useFsEvents"
+ },
+
+ // Typescript
+ "typescript.inlayHints.parameterNames.enabled": "none",
+ "typescript.inlayHints.variableTypes.enabled": false,
+ "typescript.inlayHints.functionLikeReturnTypes.enabled": false,
+ "typescript.inlayHints.enumMemberValues.enabled": true,
+ "typescript.preferences.useAliasesForRenames": false,
+ "typescript.suggest.autoImports": true,
+ "typescript.updateImportsOnFileMove.enabled": "never",
+
+ // Javascript
+ "javascript.inlayHints.parameterNames.enabled": "none",
+ "javascript.inlayHints.variableTypes.enabled": false,
+ "javascript.inlayHints.functionLikeReturnTypes.enabled": false,
+ "javascript.preferences.useAliasesForRenames": false,
+ "javascript.suggest.autoImports": true,
+ "javascript.updateImportsOnFileMove.enabled": "never",
+
+ // Go
+ "go.useLanguageServer": true,
+ "go.formatTool": "goimports",
+ "go.lintTool": "golangci-lint",
+ "go.lintOnSave": "package",
+ "go.inlayHints.parameterNames": true,
+ "go.inlayHints.functionTypeParameters": true,
+ "go.testOnSave": false,
+
+ // Productivity
+ //
+ // Git
+ "git.autofetch": true,
+ "git.pullBeforeCheckout": true,
+ "git.enableSmartCommit": true,
+ "git.confirmSync": false,
+ "git.ignoreMissingGitWarning": true,
+
+ // Files
+ "files.trimTrailingWhitespace": true,
+ "files.insertFinalNewline": true,
+ "files.autoSave": "off",
+
  // Workbench/UI
  "workbench.iconTheme": "material-icon-theme",
  "workbench.colorTheme": "01e61500-862c-41cd-b653-48d2ef7b1882",
@@ -153,28 +123,77 @@
  "workbench.editor.pinnedTabsOnSeparateRow": true,
  "workbench.editor.enablePreview": false,
 
- // Files
- "files.trimTrailingWhitespace": true,
- "files.insertFinalNewline": true,
- "files.autoSave": "onFocusChange",
-
  // Terminal
  "terminal.integrated.stickyScroll.enabled": true,
+ "terminal.integrated.scrollback": 10000,
  "terminal.integrated.cursorStyle": "line",
  "terminal.integrated.cursorWidth": 2,
  "terminal.integrated.tabs.focusMode": "singleClick",
-
- // Explorer
- "explorer.compactFolders": false,
 
  // Debug
  "debug.inlineValues": "on",
  "debug.openDebug": "neverOpen",
 
- // Security
- "security.allowedUNCHosts": ["wsl.localhost"],
- "security.workspace.trust.untrustedFiles": "open",
+ // Extensions
+ //
+ // VScord
+ // "vscord.status.details.text.editing": "In CLI {problems}",
+ // "vscord.status.details.text.viewing": "In CLI {problems}",
+ // "vscord.status.state.text.debugging": "Debugging: CLI",
 
- // General
- "window.newWindowProfile": "Predeterminado"
+ // Error Lens
+ "errorLens.codeLensTemplate": "$severity $message",
+ "errorLens.fontWeight": "bold",
+ "errorLens.gutterIconsEnabled": true,
+ "errorLens.enabledDiagnosticLevels": ["error", "warning"],
+
+ // Icon Theme
+ "material-icon-theme.activeIconPack": "react",
+ "material-icon-theme.files.color": "#90a4ae",
+ "material-icon-theme.enableLogging": true,
+ "material-icon-theme.folders.color": "#90a4ae",
+
+ // WSL
+ "remote.WSL.debug": false,
+ "remote.WSL.fileWatcher.polling": true,
+ "remote.WSL.fileWatcher.pollingInterval": 5000,
+
+ // Theme
+ "doki.wallpaper.enabled": true,
+
+ // GitHub Actions
+ "github-actions.remote-name": "origin",
+
+ // Image Preview
+ "gutterpreview.enableReferenceLookup": true,
+
+ // IntelliCode
+ "vsintellicode.python.completionsEnabled": true,
+ "intellicodeApiExamples.python.enabled": true,
+ "intellicodeCompletions.parseErrorFilter": true,
+
+ // NPM Intellisense
+ "npm-intellisense.importES6": true,
+
+ // Path Intellisense
+ "path-intellisense.autoSlashAfterDirectory": true,
+ "path-intellisense.showHiddenFiles": true,
+
+ // Prettier
+ "prettier.printWidth": 500000,
+ "prettier.tabWidth": 1,
+ "prettier.useTabs": false,
+ "prettier.semi": true,
+ "prettier.singleQuote": true,
+ "prettier.jsxSingleQuote": false,
+ "prettier.trailingComma": "es5",
+ "prettier.bracketSpacing": true,
+ "prettier.bracketSameLine": false,
+ "prettier.arrowParens": "always",
+ "prettier.quoteProps": "as-needed",
+ "prettier.singleAttributePerLine": true,
+ "prettier.proseWrap": "preserve",
+ "prettier.htmlWhitespaceSensitivity": "css",
+ "prettier.vueIndentScriptAndStyle": false,
+ "prettier.embeddedLanguageFormatting": "auto"
 }
