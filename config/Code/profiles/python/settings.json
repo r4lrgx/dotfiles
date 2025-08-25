@@ -62,9 +62,12 @@
  // Extensions
  //
  // VScord
- // "vscord.status.details.text.editing": "In CLI {problems}",
- // "vscord.status.details.text.viewing": "In CLI {problems}",
- // "vscord.status.state.text.debugging": "Debugging: CLI",
+ "vscord.status.state.text.debugging": "Debugging: CLI",
+ "vscord.status.details.text.editing": "In CLI {problems}",
+ "vscord.status.details.text.viewing": "In CLI {problems}",
+ "vscord.status.buttons.button1.git.idle.url": "https://github.com/r4lrgx",
+ "vscord.status.buttons.button1.git.active.url": "https://github.com/r4lrgx",
+ "vscord.status.buttons.button1.git.inactive.url": "https://github.com/r4lrgx",
 
  // Error Lens
  "errorLens.codeLensTemplate": "$severity $message",
