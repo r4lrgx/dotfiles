@@ -47,8 +47,8 @@ out/
 
 # Environment files (dotenv and secrets)
 # https://github.com/motdotla/dotenv
-.env.*
-.env
+.env*
+!.env.example
 
 *.pem
 *.key
