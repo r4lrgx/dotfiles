@@ -43,7 +43,7 @@ exec zsh
   - `turborepo/` – [Turborepo](https://turbo.build/) workspace configuration.
 - `extras/` – Miscellaneous:
   - `fonts/` – Custom fonts collection.
-  - `WNDX/` – Windows helper files (non-essential, can be skipped).
+  - `win/` – Windows helper files (non-essential, can be skipped).
 - `home/` – Dotfiles for the home directory:
   - `bin/` – Handy scripts to improve productivity.
   - `git/` – [Git](https://git-scm.com/) configuration + aliases (with some extras).
