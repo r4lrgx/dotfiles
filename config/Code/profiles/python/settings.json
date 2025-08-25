@@ -39,9 +39,17 @@
  // Files
  "files.trimTrailingWhitespace": true,
  "files.insertFinalNewline": true,
- "files.autoSave": "off",
+ "files.watcherExclude": {
+  "**/node_modules/**": true,
+  "**/.git/**": true,
+  "**/.next/**": true,
+  "**/.turbo/**": true,
+  "**/build/**": true,
+  "**/dist/**": true,
+  "**/out/**": true
+ },
 
- // Workbench/UI
+ // Workbench
  "workbench.iconTheme": "material-icon-theme",
  "workbench.colorTheme": "01e61500-862c-41cd-b653-48d2ef7b1882",
  "workbench.startupEditor": "none",
@@ -50,44 +58,76 @@
 
  // Terminal
  "terminal.integrated.stickyScroll.enabled": true,
- "terminal.integrated.scrollback": 10000,
+ "terminal.integrated.scrollback": 2000,
  "terminal.integrated.cursorStyle": "line",
  "terminal.integrated.cursorWidth": 2,
  "terminal.integrated.tabs.focusMode": "singleClick",
 
  // Debug
- "debug.inlineValues": "on",
  "debug.openDebug": "neverOpen",
+ "debug.inlineValues": "on",
 
  // Extensions
  //
  // VScord
- "vscord.status.state.text.debugging": "Debugging: CLI",
- "vscord.status.details.text.editing": "In CLI {problems}",
- "vscord.status.details.text.viewing": "In CLI {problems}",
- "vscord.status.buttons.button1.git.idle.url": "https://github.com/r4lrgx",
+ "vscord.app.name": "Code",
  "vscord.status.buttons.button1.git.active.url": "https://github.com/r4lrgx",
+ "vscord.status.buttons.button1.git.idle.url": "https://github.com/r4lrgx",
  "vscord.status.buttons.button1.git.inactive.url": "https://github.com/r4lrgx",
+ "vscord.status.details.text.debugging": "🔧 Debugging {file_name}{file_extension}",
+ "vscord.status.details.text.editing": "📂 In CLI {problems}",
+ "vscord.status.details.text.idle": "💤 Idling",
+ "vscord.status.details.text.noWorkSpaceText": "📂 no workspace",
+ "vscord.status.details.text.notInFile": "🪦 Not in a file!",
+ "vscord.status.details.text.viewing": "📂 In CLI {problems}",
+ "vscord.status.idle.timeout": 500,
+ "vscord.status.image.large.debugging.text": "🔧 Debugging a {LANG} file",
+ "vscord.status.image.large.editing.text": "📄 Editing a {LANG} file",
+ "vscord.status.image.large.idle.text": "💤 Idling",
+ "vscord.status.image.large.viewing.text": "👀 Viewing a {LANG} file",
+ "vscord.status.image.small.debugging.text": "⌨️ {app_name}",
+ "vscord.status.image.small.editing.key": "https://raw.githubusercontent.com/LeonardSSH/vscord/main/assets/icons/vscode-insiders.png",
+ "vscord.status.image.small.editing.text": "⌨️ {app_name}",
+ "vscord.status.image.small.idle.text": "🪦 zZz",
+ "vscord.status.image.small.notInFile.text": "💤 Snoozin...",
+ "vscord.status.image.small.viewing.key": "https://raw.githubusercontent.com/LeonardSSH/vscord/main/assets/icons/vscode-insiders.png",
+ "vscord.status.image.small.viewing.text": "⌨️ {app_name}",
+ "vscord.status.problems.text": "- 🕷️ {problems_count} problems found",
+ "vscord.status.state.text.debugging": "🔧 Debugging: CLI",
+ "vscord.status.state.text.editing": "📄 Working on {file_name}{file_extension}:{current_line}:{current_column}",
+ "vscord.status.state.text.noWorkspaceFound": "📂 No workspace.",
+ "vscord.status.state.text.viewing": "📄 Viewing {file_name}{file_extension}",
 
  // Error Lens
  "errorLens.codeLensTemplate": "$severity $message",
- "errorLens.fontWeight": "bold",
- "errorLens.gutterIconsEnabled": true,
  "errorLens.enabledDiagnosticLevels": ["error", "warning"],
+ "errorLens.gutterIconsEnabled": true,
+ "errorLens.fontWeight": "bold",
 
  // Icon Theme
  "material-icon-theme.activeIconPack": "react",
- "material-icon-theme.files.color": "#90a4ae",
- "material-icon-theme.enableLogging": true,
+ "material-icon-theme.folders.theme": "specific",
  "material-icon-theme.folders.color": "#90a4ae",
+ "material-icon-theme.files.color": "#90a4ae",
+ "material-icon-theme.hidesExplorerArrows": false,
+ "material-icon-theme.enableLogging": false,
+ "material-icon-theme.opacity": 0.95,
+ "material-icon-theme.saturation": 0.9,
 
  // WSL
  "remote.WSL.debug": false,
  "remote.WSL.fileWatcher.polling": true,
  "remote.WSL.fileWatcher.pollingInterval": 5000,
 
- // Theme
+ // Doki Theme
+ "doki.background.path": "C:\\.r4lrgx\\vscode\\wallpapers\\bg.png",
+ "doki.background.enabled": true,
+ "doki.background.anchor": "center",
+ "doki.wallpaper.path": "C:\\.r4lrgx\\vscode\\wallpapers\\wallpaper.png",
  "doki.wallpaper.enabled": true,
+ // "doki.sticker.path": "C:\\.r4lrgx\\vscode\\stickers\\sticker.png",
+ "doki.sticker.css": "z-index:100;background-position:100% 97%",
+ "doki.statusbar.name": "⚡ Code in less time ☕",
 
  // GitHub Actions
  "github-actions.remote-name": "origin",
