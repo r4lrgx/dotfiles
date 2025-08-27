@@ -1,4 +1,6 @@
 {
+ "$schema": "vscode://schemas/settings/user",
+
  // General
  //
  // Editor
