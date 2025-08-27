@@ -4,58 +4,33 @@
  // General
  //
  // Editor
- "editor.formatOnSave": true,
- "editor.cursorBlinking": "expand",
- "editor.cursorSmoothCaretAnimation": "on",
- "editor.cursorWidth": 3,
- "editor.cursorStyle": "line",
- "editor.inlayHints.enabled": "on",
- "editor.stickyScroll.enabled": true,
- "editor.inlineSuggest.enabled": true,
- "editor.guides.bracketPairs": true,
- "editor.linkedEditing": true,
  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
- "editor.minimap.enabled": false,
+ "editor.unicodeHighlight.ambiguousCharacters": false,
  "editor.codeActionsOnSave": {
   "source.fixAll": "never",
   "source.organizeImports": "never"
  },
- "[javascript]": {
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
- },
- "[javascriptreact]": {
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
- },
- "[typescript]": {
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
- },
- "[typescriptreact]": {
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
- },
- "[json]": {
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
- },
- "[jsonc]": {
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
- },
- "[json5]": {
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
- },
- "[jsonl]": {
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
- },
- "[html]": {
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
- },
- "[css]": {
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
- },
- "[yaml]": {
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
- },
- "[go]": {
-  "editor.defaultFormatter": "golang.go"
- },
+ "editor.cursorBlinking": "expand",
+ "editor.cursorSmoothCaretAnimation": "on",
+ "editor.cursorStyle": "line",
+ "editor.cursorWidth": 3,
+ "editor.colorDecorators": true,
+ "editor.formatOnSave": true,
+ "editor.find.addExtraSpaceOnTop": false,
+ "editor.guides.bracketPairs": true,
+ "editor.gotoLocation.multipleDefinitions": "goto",
+ "editor.gotoLocation.multipleImplementations": "goto",
+ "editor.inlayHints.enabled": "off",
+ "editor.inlineSuggest.enabled": true,
+ "editor.linkedEditing": true,
+ "editor.minimap.enabled": false,
+ "editor.multiCursorModifier": "ctrlCmd",
+ "editor.stickyScroll.enabled": true,
+ "editor.suggestSelection": "first",
+ "editor.tabCompletion": "on",
+ "editor.snippetSuggestions": "top",
+ "editor.renderWhitespace": "boundary",
+ "editor.renderControlCharacters": false,
 
  // Window
  "window.newWindowProfile": "Predeterminado",
@@ -64,85 +39,111 @@
  "explorer.compactFolders": false,
 
  // Security
- "security.workspace.trust.untrustedFiles": "open",
  "security.allowedUNCHosts": ["wsl.localhost"],
+ "security.workspace.trust.untrustedFiles": "open",
+
+ // Formatting
+ "[css]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+ "[html]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+ "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+ "[javascriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+ "[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+ "[json5]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+ "[jsonc]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+ "[jsonl]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+ "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+ "[typescriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+ "[yaml]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+ "[go]": { "editor.defaultFormatter": "golang.go" },
 
  // Langs
  //
  // Typescript Server
- "typescript.tsserver.maxTsServerMemory": 4096,
- "typescript.tsserver.log": "off",
  "typescript.tsserver.experimental.enableProjectDiagnostics": false,
+ "typescript.tsserver.log": "off",
+ "typescript.tsserver.maxTsServerMemory": 2048,
  "typescript.tsserver.watchOptions": {
-  "watchFile": "useFsEvents",
-  "watchDirectory": "useFsEvents"
+  "watchDirectory": "useFsEvents",
+  "watchFile": "useFsEvents"
  },
 
- // Typescript
- "typescript.inlayHints.parameterNames.enabled": "none",
- "typescript.inlayHints.variableTypes.enabled": false,
- "typescript.inlayHints.functionLikeReturnTypes.enabled": false,
- "typescript.inlayHints.enumMemberValues.enabled": true,
- "typescript.preferences.useAliasesForRenames": false,
- "typescript.suggest.autoImports": true,
- "typescript.updateImportsOnFileMove.enabled": "never",
-
- // Javascript
+ // Typescript and Javascript
+ "javascript.inlayHints.functionLikeReturnTypes.enabled": false,
  "javascript.inlayHints.parameterNames.enabled": "none",
  "javascript.inlayHints.variableTypes.enabled": false,
- "javascript.inlayHints.functionLikeReturnTypes.enabled": false,
  "javascript.preferences.useAliasesForRenames": false,
  "javascript.suggest.autoImports": true,
  "javascript.updateImportsOnFileMove.enabled": "never",
 
+ "typescript.inlayHints.enumMemberValues.enabled": true,
+ "typescript.inlayHints.functionLikeReturnTypes.enabled": false,
+ "typescript.inlayHints.parameterNames.enabled": "none",
+ "typescript.inlayHints.variableTypes.enabled": false,
+ "typescript.preferences.useAliasesForRenames": false,
+ "typescript.suggest.autoImports": true,
+ "typescript.updateImportsOnFileMove.enabled": "never",
+
  // Go
- "go.useLanguageServer": true,
  "go.formatTool": "goimports",
- "go.lintTool": "golangci-lint",
- "go.lintOnSave": "package",
- "go.inlayHints.parameterNames": true,
  "go.inlayHints.functionTypeParameters": true,
+ "go.inlayHints.parameterNames": true,
+ "go.lintOnSave": "package",
+ "go.lintTool": "golangci-lint",
  "go.testOnSave": false,
+ "go.useLanguageServer": true,
 
  // Productivity
  //
  // Git
  "git.autofetch": true,
- "git.pullBeforeCheckout": true,
- "git.enableSmartCommit": true,
  "git.confirmSync": false,
+ "git.enableSmartCommit": true,
  "git.ignoreMissingGitWarning": true,
+ "git.pullBeforeCheckout": true,
 
  // Files
- "files.trimTrailingWhitespace": true,
  "files.insertFinalNewline": true,
+ "files.trimTrailingWhitespace": true,
+ "files.exclude": {
+  "**/.DS_Store": true,
+  "**/Thumbs.db": true
+ },
  "files.watcherExclude": {
-  "**/node_modules/**": true,
   "**/.git/**": true,
   "**/.next/**": true,
   "**/.turbo/**": true,
   "**/build/**": true,
   "**/dist/**": true,
+  "**/node_modules/**": true,
   "**/out/**": true
  },
 
+ // Search
+ "search.exclude": {
+  "**/node_modules": true,
+  "**/dist": true,
+  "**/build": true
+ },
+ "search.quickOpen.includeSymbols": true,
+
  // Workbench
- "workbench.iconTheme": "material-icon-theme",
  "workbench.colorTheme": "01e61500-862c-41cd-b653-48d2ef7b1882",
- "workbench.startupEditor": "none",
+ "workbench.editor.enablePreview": true,
  "workbench.editor.pinnedTabsOnSeparateRow": true,
- "workbench.editor.enablePreview": false,
+ "workbench.iconTheme": "material-icon-theme",
+ "workbench.sideBar.location": "right",
+ "workbench.startupEditor": "none",
 
  // Terminal
- "terminal.integrated.stickyScroll.enabled": true,
- "terminal.integrated.scrollback": 2000,
  "terminal.integrated.cursorStyle": "line",
  "terminal.integrated.cursorWidth": 2,
+ "terminal.integrated.scrollback": 2000,
+ "terminal.integrated.stickyScroll.enabled": true,
  "terminal.integrated.tabs.focusMode": "singleClick",
 
  // Debug
- "debug.openDebug": "neverOpen",
  "debug.inlineValues": "on",
+ "debug.openDebug": "neverOpen",
 
  // Extensions
  //
@@ -178,16 +179,16 @@
  // Error Lens
  "errorLens.codeLensTemplate": "$severity $message",
  "errorLens.enabledDiagnosticLevels": ["error", "warning"],
- "errorLens.gutterIconsEnabled": true,
  "errorLens.fontWeight": "bold",
+ "errorLens.gutterIconsEnabled": true,
 
  // Icon Theme
  "material-icon-theme.activeIconPack": "react",
- "material-icon-theme.folders.theme": "specific",
- "material-icon-theme.folders.color": "#90a4ae",
- "material-icon-theme.files.color": "#90a4ae",
- "material-icon-theme.hidesExplorerArrows": false,
  "material-icon-theme.enableLogging": false,
+ "material-icon-theme.files.color": "#90a4ae",
+ "material-icon-theme.folders.color": "#90a4ae",
+ "material-icon-theme.folders.theme": "specific",
+ "material-icon-theme.hidesExplorerArrows": false,
  "material-icon-theme.opacity": 0.95,
  "material-icon-theme.saturation": 0.9,
 
@@ -197,13 +198,13 @@
  "remote.WSL.fileWatcher.pollingInterval": 5000,
 
  // Doki Theme
- "doki.background.path": "C:\\.r4lrgx\\vscode\\wallpapers\\bg.png",
- "doki.background.enabled": true,
  "doki.background.anchor": "center",
- "doki.wallpaper.path": "C:\\.r4lrgx\\vscode\\wallpapers\\wallpaper.png",
+ "doki.background.enabled": true,
+ "doki.background.path": "C:\\.r4lrgx\\vscode\\wallpapers\\bg.png",
  "doki.wallpaper.enabled": true,
- // "doki.sticker.path": "C:\\.r4lrgx\\vscode\\stickers\\sticker.png",
+ "doki.wallpaper.path": "C:\\.r4lrgx\\vscode\\wallpapers\\wallpaper.png",
  "doki.sticker.css": "z-index:100;background-position:100% 97%",
+ // "doki.sticker.path": "C:\\.r4lrgx\\vscode\\stickers\\sticker.png",
  "doki.statusbar.name": "⚡ Code in less time ☕",
 
  // GitHub Actions
@@ -225,20 +226,20 @@
  "path-intellisense.showHiddenFiles": true,
 
  // Prettier
- "prettier.printWidth": 500000,
- "prettier.tabWidth": 1,
- "prettier.useTabs": false,
- "prettier.semi": true,
- "prettier.singleQuote": true,
- "prettier.jsxSingleQuote": false,
- "prettier.trailingComma": "es5",
- "prettier.bracketSpacing": true,
- "prettier.bracketSameLine": false,
  "prettier.arrowParens": "always",
- "prettier.quoteProps": "as-needed",
- "prettier.singleAttributePerLine": true,
- "prettier.proseWrap": "preserve",
+ "prettier.bracketSameLine": false,
+ "prettier.bracketSpacing": true,
+ "prettier.embeddedLanguageFormatting": "auto",
  "prettier.htmlWhitespaceSensitivity": "css",
- "prettier.vueIndentScriptAndStyle": false,
- "prettier.embeddedLanguageFormatting": "auto"
+ "prettier.jsxSingleQuote": false,
+ "prettier.printWidth": 500000,
+ "prettier.proseWrap": "preserve",
+ "prettier.quoteProps": "as-needed",
+ "prettier.semi": true,
+ "prettier.singleAttributePerLine": true,
+ "prettier.singleQuote": true,
+ "prettier.tabWidth": 1,
+ "prettier.trailingComma": "es5",
+ "prettier.useTabs": false,
+ "prettier.vueIndentScriptAndStyle": false
 }
