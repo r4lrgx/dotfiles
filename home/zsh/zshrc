@@ -56,7 +56,7 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR="nvim"
 export VISUAL="nvim"
 
-# PATH
+# PATH bin
 [ ! -d "$HOME/.local/bin" ] && mkdir -p "$HOME/.local/bin"
 [[ ":$PATH:" != *":$HOME/.local/bin:"* ]] && export PATH="$HOME/.local/bin:$PATH"
 
@@ -90,16 +90,16 @@ alias cls='clear'
 alias clean='clear'
 alias purge='clear'
 
-# Listing
-alias ll='ls -lah --color=auto'
-
-# Windows WSL
-alias winx='cd /mnt/c/Users/$(cmd.exe /C "echo %USERNAME%" 2>/dev/null | tr -d "\r")'
-
 # Go tools
 alias goclean="go clean && go clean -modcache && rm -rf $GOCACHE"
 alias gopurge="go clean && go clean -modcache && rm -rf $GOCACHE"
 alias gocls="go clean && go clean -modcache && rm -rf $GOCACHE"
+
+# Windows WSL
+alias winx='cd /mnt/c/Users/$(cmd.exe /C "echo %USERNAME%" 2>/dev/null | tr -d "\r")'
+
+# Listing
+alias ll='ls -lah --color=auto'
 
 # Modern alternatives
 alias neofetch="fastfetch"
@@ -113,5 +113,12 @@ eval "$(gh completion --shell zsh)"
 [ -f "$HOME/.atuin/bin/env" ] && source "$HOME/.atuin/bin/env"
 eval "$(atuin init zsh)" # or zsh --disable-up-arrow
 
-# My theme settings from `p10k configure`, which can also be edited in the ~/.p10k.zsh file.
+# My theme settings from `p10k configure`.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# PNPM
+export PNPM_HOME="$HOME/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
