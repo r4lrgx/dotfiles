@@ -24,7 +24,7 @@
  "editor.inlineSuggest.enabled": true,
  "editor.linkedEditing": true,
  "editor.minimap.enabled": false,
- "editor.multiCursorModifier": "ctrlCmd",
+ "editor.multiCursorModifier": "alt",
  "editor.stickyScroll.enabled": true,
  "editor.suggestSelection": "first",
  "editor.tabCompletion": "on",
@@ -131,7 +131,7 @@
  "workbench.editor.enablePreview": true,
  "workbench.editor.pinnedTabsOnSeparateRow": true,
  "workbench.iconTheme": "material-icon-theme",
- "workbench.sideBar.location": "right",
+ "workbench.sideBar.location": "left",
  "workbench.startupEditor": "none",
 
  // Terminal
