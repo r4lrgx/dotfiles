@@ -8,12 +8,6 @@ TAG="${PURPLE}[Fedora-Setup]${RESET}"
 
 echo -e "${TAG} ${CYAN}Preparing Fedora environment with required packages...${RESET}"
 
-# Install Core dev tools
-echo -e "${TAG} ${PINK}Installing essential CLI dev tools...${RESET}"
-sudo dnf install 'dnf-command(config-manager)' -y
-sudo dnf install -y git gh zsh curl unzip btop fastfetch atuin neovim tmux fzf
-echo -e
-
 # Install Languages and compilers
 echo -e "${TAG} ${LIGHT_BLUE}Installing programming languages, compilers and frameworks...${RESET}"
 sudo dnf install -y python3 python3-pip
@@ -41,6 +35,14 @@ nvm use --lts
 nvm alias default node
 echo -e "${TAG} ${CYAN}Node.js version: $(node -v)${RESET}"
 echo -e "${TAG} ${CYAN}NPM version: $(npm -v)${RESET}"
+
+# Install Core dev tools
+echo -e "${TAG} ${PINK}Installing essential CLI dev tools...${RESET}"
+sudo dnf install 'dnf-command(config-manager)' -y
+sudo dnf install -y git gh zsh curl unzip btop bat fastfetch atuin neovim tmux fzf
+$HOME/.cargo/bin/cargo install eza --locked
+$HOME/.cargo/bin/cargo install zoxide --locked
+echo -e
 
 # Backup existing configuration files
 backup_file() {

@@ -70,6 +70,7 @@ export GO111MODULE="on"
 # PATH
 export PATH="$PATH:$GOBIN"
 export PATH="$PATH:/var/lib/snapd/snap/bin"
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
@@ -83,27 +84,6 @@ export GPG_TTY=$(tty)
 # Corepack for package managers
 export COREPACK_ENABLE_STRICT=0
 
-# Aliases
-#
-# Clear commands
-alias cls='clear'
-alias clean='clear'
-alias purge='clear'
-
-# Go tools
-alias goclean="go clean && go clean -modcache && rm -rf $GOCACHE"
-alias gopurge="go clean && go clean -modcache && rm -rf $GOCACHE"
-alias gocls="go clean && go clean -modcache && rm -rf $GOCACHE"
-
-# Windows WSL
-alias winx='cd /mnt/c/Users/$(cmd.exe /C "echo %USERNAME%" 2>/dev/null | tr -d "\r")'
-
-# Listing
-alias ll='ls -lah --color=auto'
-
-# Modern alternatives
-alias neofetch="fastfetch"
-
 # Tool Integrations
 #
 # GitHub CLI Completions
@@ -112,6 +92,9 @@ eval "$(gh completion --shell zsh)"
 # Atuin (better history)
 [ -f "$HOME/.atuin/bin/env" ] && source "$HOME/.atuin/bin/env"
 eval "$(atuin init zsh)" # or zsh --disable-up-arrow
+
+# Zoxide (better cd)
+eval "$(zoxide init zsh)"
 
 # My theme settings from `p10k configure`.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -122,3 +105,27 @@ case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
+
+# Aliases
+#
+# Clear commands
+alias cls="clear"
+alias clean="clear"
+alias purge="clear"
+
+# Listing
+alias ll="eza --icons --level=2 -a"
+alias ls="eza --icons"
+alias lt="eza --tree --icons --level=2 -a"
+
+alias ff='fzf --preview "bat --style=plain --color=always --paging=never --line-range :200 {}"'
+alias cat='bat --style=plain --color=always --paging=never --line-range :200'
+alias catf='bat --style=plain'
+
+alias vf='nvim $(fzf)'
+
+alias cd='z'
+
+# Modern alternatives
+alias neofetch="fastfetch"
+

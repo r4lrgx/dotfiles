@@ -1,6 +1,30 @@
 #!/bin/sh
 
-# ~/.local/bin
+# gox - helper for Go projects
+
+set -e
+
+RED='\033[0;31m'
+GRN='\033[0;32m'
+YLW='\033[1;33m'
+NC='\033[0m' # No Color
+
+go_build() {
+    file="${1:-main.go}"
+    name="${file%.go}"
+    flags="$2"
+    echo -e "${YLW}Building $file...${NC}"
+    go build $flags -o "$name" "$file" && echo -e "${GRN}Compiled: $name${NC}"
+}
+
+check_go() {
+    if ! command -v go >/dev/null 2>&1; then
+        echo -e "${RED}Go is not installed or not in PATH.${NC}"
+        exit 1
+    fi
+}
+
+check_go
 
 cmd="$1"
 shift
@@ -10,25 +34,19 @@ case "$cmd" in
         go run "${1:-main.go}"
         ;;
     build)
-        file="${1:-main.go}"
-        name="${file%.go}"
-        go build -o "$name" "$file" && echo "Compiled: $name"
+        go_build "$1"
         ;;
     buildx)
-        file="${1:-main.go}"
-        name="${file%.go}"
-        go build -ldflags "-s -w" -o "$name" "$file" && echo "Compiled: $name"
+        go_build "$1" "-ldflags '-s -w'"
         ;;
     buildx-win)
-        file="${1:-main.go}"
-        name="${file%.go}"
-        go build -ldflags "-s -w -H=windowsgui" -o "$name" "$file" && echo "Compiled: $name"
+        go_build "$1" "-ldflags '-s -w -H=windowsgui'"
         ;;
     exec)
         file="${1:-main.go}"
         name="${file%.go}"
         if [ ! -f "$name" ]; then
-            echo "Not compiled yet. Compiling..."
+            echo -e "${YLW}Not compiled yet. Compiling...${NC}"
             "$0" build "$file" || exit 1
         fi
         "./$name"
@@ -48,8 +66,11 @@ case "$cmd" in
     tidy)
         go mod tidy
         ;;
-    clean)
-        go clean && go clean -modcache
+    clean|clear|purge)
+        echo -e "${YLW}Cleaning cache and binaries...${NC}"
+        go clean -x
+        go clean -modcache
+        [ -n "$GOCACHE" ] && rm -rf "$GOCACHE"
         ;;
     test)
         go test ./... -v
@@ -59,7 +80,7 @@ case "$cmd" in
         ;;
     lint)
         if ! command -v golangci-lint >/dev/null 2>&1; then
-            echo "Installing golangci-lint..."
+            echo -e "${YLW}Installing golangci-lint...${NC}"
             go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
         fi
         golangci-lint run
@@ -87,7 +108,7 @@ case "$cmd" in
         ;;
     dev)
         if ! command -v air >/dev/null 2>&1; then
-            echo "Installing Air (hot reload for Go)..."
+            echo -e "${YLW}Installing Air (hot reload)...${NC}"
             go install github.com/cosmtrek/air@latest
         fi
         air
@@ -97,16 +118,16 @@ case "$cmd" in
         echo ""
         echo "Available commands:"
         echo "  run [file]         Run a Go file"
-        echo "  build [file]       Build a Go file (default, includes debug symbols)"
-        echo "  buildx [file]      Build a Go file (optimized, strips debug info)"
-        echo "  buildx-win [file]  Build a Go file for Windows GUI (no console window)"
+        echo "  build [file]       Build with debug symbols"
+        echo "  buildx [file]      Build optimized (stripped debug info)"
+        echo "  buildx-win [file]  Build for Windows GUI (no console window)"
         echo "  exec [file]        Execute compiled binary"
         echo "  buildrun [file]    Build and execute"
         echo "  init <module>      Initialize a new module"
         echo "  add <pkg>          Install dependencies"
         echo "  update             Update dependencies"
         echo "  tidy               Clean unused dependencies"
-        echo "  clean              Clean cache and binaries"
+        echo "  clean/clear/purge  Clean cache and binaries"
         echo "  test               Run tests"
         echo "  cover              Run tests with coverage"
         echo "  lint               Run linter"

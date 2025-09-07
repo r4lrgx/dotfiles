@@ -34,6 +34,7 @@
 
  // Window
  "window.newWindowProfile": "Predeterminado",
+ "window.openFilesInNewWindow": "on",
 
  // Explorer
  "explorer.compactFolders": false,
@@ -128,7 +129,7 @@
 
  // Workbench
  "workbench.colorTheme": "01e61500-862c-41cd-b653-48d2ef7b1882",
- "workbench.editor.enablePreview": true,
+ "workbench.editor.enablePreview": false,
  "workbench.editor.pinnedTabsOnSeparateRow": true,
  "workbench.iconTheme": "material-icon-theme",
  "workbench.sideBar.location": "left",

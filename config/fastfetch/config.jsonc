@@ -8,132 +8,129 @@
    "left": 1
   }
  },
+
  "display": {
-  "separator": ": "
+  "separator": "  "
  },
 
  "modules": [
-  // Title
-  {
-   "type": "title",
-   "fqdn": false,
-   "key": "@",
-   "keyColor": "#9b59b6",
-   "color": {
-    "user": "white",
-    "at": "white",
-    "host": "white"
-   }
-  },
-  "separator",
+  "break",
 
-  // System
   {
-   "type": "os",
-   "keyColor": "#9b59b6",
-   "outputColor": "#99ffff",
-   "format": ""
+   "type": "custom",
+   "outputColor": "36",
+   "format": "╭─➤  HARDWARE ⮜─────────────────────────────────────────────╮"
   },
   {
-   "type": "host",
-   "keyColor": "#a95dc4",
-   "outputColor": "#66ffff"
+   "type": "custom",
+   "outputColor": "36",
+   "format": "╰─┬──────────────────────────────────────────────────────────╯"
   },
   {
-   "type": "kernel",
-   "keyColor": "#b761d2",
-   "outputColor": "#00ffff"
+   "type": "chassis",
+   "outputColor": "38;5;141",
+   "key": "  ├ ",
+   "keyColor": "36"
   },
-  {
-   "type": "uptime",
-   "keyColor": "#c565df",
-   "outputColor": "#11f7ff"
-  },
-  {
-   "type": "packages",
-   "keyColor": "#d369ed",
-   "outputColor": "#22edff"
-  },
-
-  // Hardware
   {
    "type": "cpu",
-   "temp": true,
-   "keyColor": "#e056fd",
-   "outputColor": "#33e3ff"
+   "outputColor": "38;5;141",
+   "key": "  ├ ",
+   "keyColor": "36"
   },
   {
    "type": "gpu",
-   "temp": true,
-   "keyColor": "#da63f8",
-   "outputColor": "#44d9ff"
+   "outputColor": "38;5;141",
+   "key": "  ├ ",
+   "keyColor": "36"
   },
   {
    "type": "memory",
-   "keyColor": "#d470f3",
-   "outputColor": "#55cfff",
-   "percent": {
-    "type": ["bar", "bar-monochrome", "num", "num-color"],
-    "green": 50,
-    "yellow": 80
-   }
-  },
-  {
-   "type": "swap",
-   "keyColor": "#ce7dee",
-   "outputColor": "#67c5ff"
+   "outputColor": "38;5;141",
+   "key": "  ├ ",
+   "keyColor": "36"
   },
   {
    "type": "disk",
-   "keyColor": "#c88ae9",
-   "outputColor": "#79bbff",
-   "folders": "/"
-  },
-
-  // Environment
-  {
-   "type": "shell",
-   "keyColor": "#b397f2",
-   "outputColor": "#8bb1ff"
-  },
-  {
-   "type": "terminal",
-   "keyColor": "#9ea4fb",
-   "outputColor": "#9ea4fb"
-  },
-  {
-   "type": "wm",
-   "keyColor": "#67c5ff",
-   "outputColor": "#ce7dee"
+   "outputColor": "38;5;141",
+   "key": "  ├ ",
+   "keyColor": "36"
   },
   {
    "type": "display",
-   "keyColor": "#00ffff",
-   "outputColor": "#b761d2",
-   "preciseRefreshRate": false
-  },
-
-  // Network
-  {
-   "type": "localip",
-   "keyColor": "#66ffff",
-   "outputColor": "#a95dc4"
+   "outputColor": "38;5;141",
+   "key": "  ├ ",
+   "keyColor": "36"
   },
   {
-   "type": "publicip",
-   "keyColor": "#99ffff",
-   "outputColor": "#9b59b6"
+   "type": "battery",
+   "outputColor": "38;5;141",
+   "key": "  ├ ",
+   "keyColor": "36"
   },
-
-  // Locale
   {
-   "type": "locale",
-   "keyColor": "#ccffff",
-   "outputColor": "#9b59b6"
+   "type": "custom",
+   "outputColor": "36",
+   "format": "  ╰──────────────────────────────────────────────────────────╯"
   },
-
-  // Colors preview
   "break",
-  "colors"
+
+  {
+   "type": "custom",
+   "outputColor": "38;5;141",
+   "format": "╭─➤  SOFTWARE ⮜─────────────────────────────────────────────╮"
+  },
+  {
+   "type": "custom",
+   "outputColor": "38;5;141",
+   "format": "╰─┬──────────────────────────────────────────────────────────╯"
+  },
+  {
+   "type": "os",
+   "outputColor": "36",
+   "key": "  ├ ",
+   "keyColor": "38;5;141"
+  },
+  {
+   "type": "kernel",
+   "outputColor": "36",
+   "key": "  ├ ",
+   "keyColor": "38;5;141"
+  },
+  {
+   "type": "shell",
+   "outputColor": "36",
+   "key": "  ├ ",
+   "keyColor": "38;5;141"
+  },
+  {
+   "type": "packages",
+   "outputColor": "36",
+   "key": "  ├ ",
+   "keyColor": "38;5;141"
+  },
+  {
+   "type": "terminal",
+   "outputColor": "36",
+   "key": "  ├ ",
+   "keyColor": "38;5;141"
+  },
+  {
+   "type": "wm",
+   "outputColor": "36",
+   "key": "  ├ ",
+   "keyColor": "38;5;141"
+  },
+  {
+   "type": "de",
+   "outputColor": "36",
+   "key": "  ├ ",
+   "keyColor": "38;5;141"
+  },
+  {
+   "type": "custom",
+   "outputColor": "38;5;141",
+   "format": "  ╰──────────────────────────────────────────────────────────╯"
+  }
  ]
 }
