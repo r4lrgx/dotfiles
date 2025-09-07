@@ -18,3 +18,7 @@
 	path = home/zsh/theme/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k.git
 	ignore = dirty
+[submodule "config/nvim"]
+	path = config/nvim
+	url = https://github.com/LazyVim/starter
+	ignore = dirty
