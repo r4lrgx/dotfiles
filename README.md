@@ -14,6 +14,17 @@
 
 ## 📸 Preview
 
+<table align="center">
+  <tr>
+    <td colspan="4"><img src="https://github.com/r4lrgx/dotfiles/assets/153697070/91c335f2-c57e-45ac-930b-5333bd2ee456"></td>
+  </tr>
+  <tr>
+    <td colspan="1"><img src="https://github.com/r4lrgx/dotfiles/assets/153697070/f3a7afe5-7b06-401e-af70-8b1c462111b1"></td>
+    <td colspan="1"><img src="https://github.com/r4lrgx/dotfiles/assets/153697070/60d21c54-a0e7-42f2-9845-18d864887edd"></td>
+    <td colspan="1"><img src="https://github.com/r4lrgx/dotfiles/assets/153697070/9fc55a4d-6300-47d3-a8a8-9eb542bdc59b"></td>
+  </tr>
+</table>
+
 ## 🤖 Setup
 
 Clone the repository with all its submodules and launch the installation script:
