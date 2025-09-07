@@ -1,10 +1,2 @@
 *.local
 config/gh/hosts.yml
-
-config/nvim/tt.*
-config/nvim/foo.*
-config/nvim/.repro
-config/nvim/*.log
-config/nvim/*.json
-config/nvim/data
-config/nvim/debug
