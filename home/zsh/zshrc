@@ -101,22 +101,28 @@ eval "$(zoxide init zsh)"
 
 # Aliases
 #
-# Clear commands
+# Clear
 alias cls="clear"
 alias clean="clear"
 alias purge="clear"
 
-# Listing
-alias ll="eza --icons --level=2 -a"
+# Dir listing with eza
 alias ls="eza --icons"
-alias lt="eza --tree --icons --level=2 -a"
+alias la="eza --icons -a"
+alias ll="eza --icons -a -l --group-directories-first"
+alias lt="eza --icons -a --tree --level=2"
 
-alias ff='fzf --preview "bat --style=plain --color=always --paging=never --line-range :200 {}"'
+# File viewing with bat
 alias cat='bat --style=plain --color=always --paging=never --line-range :200'
 alias catf='bat --style=plain'
 
+# Search + preview
+alias ff='fzf --preview "bat --style=plain --color=always --paging=never --line-range :200 {}"'
+
+# Edit with Neovim + fzf
 alias vf='nvim $(fzf)'
 
+# Fast navigation with zoxide
 alias cd='z'
 
 # Modern alternatives
