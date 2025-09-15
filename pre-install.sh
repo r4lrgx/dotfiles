@@ -107,6 +107,17 @@ else
 fi
 echo -e
 
+# Install Cloudflared
+if ! command -v cloudflared >/dev/null 2>&1; then
+  echo -e "${TAG} ${PURPLE}Installing Cloudflared...${RESET}"
+  curl -fsSL https://pkg.cloudflare.com/cloudflared-ascii.repo | sudo tee /etc/yum.repos.d/cloudflared.repo
+  sudo dnf makecache --refresh
+  sudo dnf install -y cloudflared
+else
+  echo -e "${TAG} ${CYAN}cloudflared is already installed:${RESET} $(cloudflared --version 2>/dev/null || echo 'unknown version')"
+fi
+echo -e
+
 # Link home/bin/ from home/bin/ to ~/.local/bin
 mkdir -p "$HOME/.local/bin"
 for file in home/bin/*; do
