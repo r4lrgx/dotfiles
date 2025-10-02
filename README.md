@@ -1,4 +1,4 @@
-# 📂 ~/.dotfiles
+![dotfiles config](https://github.com/user-attachments/assets/c9b9dd35-5d28-4977-bdcf-41f17c66d742)
 
 <div align="center">
   <a aria-label="License" href="https://github.com/r4lrgx/dotfiles/blob/main/LICENSE.md">
@@ -11,6 +11,8 @@
     <img src="https://img.shields.io/github/issues/r4lrgx/dotfiles?style=flat-square&logo=github&color=limegreen&label=Issues">
   </a>
 </div>
+
+---
 
 ## 📸 Preview
 
