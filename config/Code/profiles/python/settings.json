@@ -1,71 +1,95 @@
 {
+ // "$schema": "vscode://schemas/settings/user",
+
  // General
  //
+ // Window
+ "window.openFilesInNewWindow": "on",
+
+ // Workbench
+ "workbench.colorTheme": "01e61500-862c-41cd-b653-48d2ef7b1882",
+ "workbench.editor.enablePreview": false,
+ "workbench.editor.pinnedTabsOnSeparateRow": true,
+ "workbench.iconTheme": "material-icon-theme",
+ "workbench.sideBar.location": "left",
+ "workbench.startupEditor": "none",
+
  // Editor
- "editor.formatOnSave": true,
- "editor.defaultFormatter": "ms-python.black-formatter",
- "editor.cursorBlinking": "expand",
- "editor.cursorSmoothCaretAnimation": "on",
- "editor.cursorWidth": 3,
- "editor.cursorStyle": "line",
- "editor.inlayHints.enabled": "on",
- "editor.stickyScroll.enabled": true,
- "editor.inlineSuggest.enabled": true,
- "editor.guides.bracketPairs": true,
- "editor.linkedEditing": true,
  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
- "editor.minimap.enabled": false,
+ "editor.unicodeHighlight.ambiguousCharacters": false,
  "editor.codeActionsOnSave": {
   "source.fixAll": "never",
   "source.organizeImports": "never"
  },
-
- // Explorer
- "explorer.compactFolders": false,
-
- // Security
- "security.workspace.trust.untrustedFiles": "open",
- "security.allowedUNCHosts": ["wsl.localhost"],
-
- // Productivity
- //
- // Git
- "git.autofetch": true,
- "git.pullBeforeCheckout": true,
- "git.enableSmartCommit": true,
- "git.confirmSync": false,
- "git.ignoreMissingGitWarning": true,
+ "editor.cursorBlinking": "expand",
+ "editor.cursorSmoothCaretAnimation": "on",
+ "editor.cursorStyle": "line",
+ "editor.cursorWidth": 3,
+ "editor.colorDecorators": true,
+ "editor.formatOnSave": true,
+ "editor.defaultFormatter": "ms-python.black-formatter",
+ "editor.find.addExtraSpaceOnTop": false,
+ "editor.guides.bracketPairs": true,
+ "editor.gotoLocation.multipleDefinitions": "goto",
+ "editor.gotoLocation.multipleImplementations": "goto",
+ "editor.inlayHints.enabled": "off",
+ "editor.inlineSuggest.enabled": true,
+ "editor.linkedEditing": true,
+ "editor.minimap.enabled": false,
+ "editor.multiCursorModifier": "alt",
+ "editor.stickyScroll.enabled": true,
+ "editor.suggestSelection": "first",
+ "editor.tabCompletion": "on",
+ "editor.snippetSuggestions": "top",
+ "editor.renderWhitespace": "boundary",
+ "editor.renderControlCharacters": false,
 
  // Files
- "files.trimTrailingWhitespace": true,
  "files.insertFinalNewline": true,
+ "files.trimTrailingWhitespace": true,
+ "files.exclude": {
+  "**/.DS_Store": true,
+  "**/Thumbs.db": true
+ },
  "files.watcherExclude": {
-  "**/node_modules/**": true,
   "**/.git/**": true,
-  "**/.next/**": true,
-  "**/.turbo/**": true,
   "**/build/**": true,
   "**/dist/**": true,
   "**/out/**": true
  },
 
- // Workbench
- "workbench.iconTheme": "material-icon-theme",
- "workbench.colorTheme": "01e61500-862c-41cd-b653-48d2ef7b1882",
- "workbench.startupEditor": "none",
- "workbench.editor.pinnedTabsOnSeparateRow": true,
- "workbench.editor.enablePreview": false,
+ // Productivity
+ //
+ // Search
+ "search.exclude": {
+  "**/dist": true,
+  "**/build": true
+ },
+ "search.quickOpen.includeSymbols": true,
+
+ // Explorer
+ "explorer.compactFolders": false,
 
  // Terminal
- "terminal.integrated.stickyScroll.enabled": true,
- "terminal.integrated.scrollback": 2000,
  "terminal.integrated.cursorStyle": "line",
  "terminal.integrated.cursorWidth": 2,
+ "terminal.integrated.scrollback": 2000,
+ "terminal.integrated.stickyScroll.enabled": true,
  "terminal.integrated.tabs.focusMode": "singleClick",
 
  // Debug
- "debug.openDebug": "neverOpen",
  "debug.inlineValues": "on",
+ "debug.openDebug": "neverOpen",
+
+ // Security
+ "security.workspace.trust.untrustedFiles": "open",
+
+ // Git
+ "git.autofetch": true,
+ "git.confirmSync": false,
+ "git.enableSmartCommit": true,
+ "git.ignoreMissingGitWarning": true,
+ "git.pullBeforeCheckout": true,
 
  // Extensions
  //
@@ -74,14 +98,14 @@
  "vscord.status.buttons.button1.git.active.url": "https://github.com/r4lrgx",
  "vscord.status.buttons.button1.git.idle.url": "https://github.com/r4lrgx",
  "vscord.status.buttons.button1.git.inactive.url": "https://github.com/r4lrgx",
- "vscord.status.details.text.debugging": "🔧 Debugging {file_name}{file_extension}",
+ "vscord.status.details.text.debugging": "🐛 Debugging {file_name}{file_extension}",
  "vscord.status.details.text.editing": "📂 In .r4lrgx {problems}",
  "vscord.status.details.text.idle": "💤 Idling",
  "vscord.status.details.text.noWorkSpaceText": "📂 no workspace",
  "vscord.status.details.text.notInFile": "🪦 Not in a file!",
  "vscord.status.details.text.viewing": "📂 In .r4lrgx {problems}",
  "vscord.status.idle.timeout": 500,
- "vscord.status.image.large.debugging.text": "🔧 Debugging a {LANG} file",
+ "vscord.status.image.large.debugging.text": "🐛 Debugging a {LANG} file",
  "vscord.status.image.large.editing.text": "📄 Editing a {LANG} file",
  "vscord.status.image.large.idle.text": "💤 Idling",
  "vscord.status.image.large.viewing.text": "👀 Viewing a {LANG} file",
@@ -93,7 +117,7 @@
  "vscord.status.image.small.viewing.key": "https://raw.githubusercontent.com/LeonardSSH/vscord/main/assets/icons/vscode-insiders.png",
  "vscord.status.image.small.viewing.text": "⌨️ {app_name}",
  "vscord.status.problems.text": "- 🕷️ {problems_count} problems found",
- "vscord.status.state.text.debugging": "🔧 Debugging: .r4lrgx",
+ "vscord.status.state.text.debugging": "🐛 Debugging: .r4lrgx",
  "vscord.status.state.text.editing": "📄 Working on {file_name}{file_extension}:{current_line}:{current_column}",
  "vscord.status.state.text.noWorkspaceFound": "📂 No workspace.",
  "vscord.status.state.text.viewing": "📄 Viewing {file_name}{file_extension}",
@@ -101,16 +125,16 @@
  // Error Lens
  "errorLens.codeLensTemplate": "$severity $message",
  "errorLens.enabledDiagnosticLevels": ["error", "warning"],
- "errorLens.gutterIconsEnabled": true,
  "errorLens.fontWeight": "bold",
+ "errorLens.gutterIconsEnabled": true,
 
  // Icon Theme
  "material-icon-theme.activeIconPack": "react",
- "material-icon-theme.folders.theme": "specific",
- "material-icon-theme.folders.color": "#90a4ae",
- "material-icon-theme.files.color": "#90a4ae",
- "material-icon-theme.hidesExplorerArrows": false,
  "material-icon-theme.enableLogging": false,
+ "material-icon-theme.files.color": "#90a4ae",
+ "material-icon-theme.folders.color": "#90a4ae",
+ "material-icon-theme.folders.theme": "specific",
+ "material-icon-theme.hidesExplorerArrows": false,
  "material-icon-theme.opacity": 0.95,
  "material-icon-theme.saturation": 0.9,
 
@@ -120,13 +144,14 @@
  "remote.WSL.fileWatcher.pollingInterval": 5000,
 
  // Doki Theme
- "doki.background.path": "C:\\.r4lrgx\\vscode\\wallpapers\\bg.png",
- "doki.background.enabled": true,
+ // Doki Theme
  "doki.background.anchor": "center",
- "doki.wallpaper.path": "C:\\.r4lrgx\\vscode\\wallpapers\\wallpaper.png",
+ "doki.background.enabled": true,
+ "doki.background.path": "C:\\.r4lrgx\\vscode\\theme\\bg.png",
  "doki.wallpaper.enabled": true,
- // "doki.sticker.path": "C:\\.r4lrgx\\vscode\\stickers\\sticker.png",
+ "doki.wallpaper.path": "C:\\.r4lrgx\\vscode\\theme\\wallpaper.png",
  "doki.sticker.css": "z-index:100;background-position:100% 97%",
+ // "doki.sticker.path": "C:\\.r4lrgx\\vscode\\theme\\sticker.png",
  "doki.statusbar.name": "⚡ Code in less time ☕",
 
  // GitHub Actions
@@ -139,9 +164,6 @@
  "vsintellicode.python.completionsEnabled": true,
  "intellicodeApiExamples.python.enabled": true,
  "intellicodeCompletions.parseErrorFilter": true,
-
- // NPM Intellisense
- "npm-intellisense.importES6": true,
 
  // Path Intellisense
  "path-intellisense.autoSlashAfterDirectory": true,

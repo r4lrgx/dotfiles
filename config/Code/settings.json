@@ -217,11 +217,11 @@
  // Doki Theme
  "doki.background.anchor": "center",
  "doki.background.enabled": true,
- "doki.background.path": "C:\\.r4lrgx\\vscode\\wallpapers\\bg.png",
+ "doki.background.path": "C:\\.r4lrgx\\vscode\\theme\\bg.png",
  "doki.wallpaper.enabled": true,
- "doki.wallpaper.path": "C:\\.r4lrgx\\vscode\\wallpapers\\wallpaper.png",
+ "doki.wallpaper.path": "C:\\.r4lrgx\\vscode\\theme\\wallpaper.png",
  "doki.sticker.css": "z-index:100;background-position:100% 97%",
- // "doki.sticker.path": "C:\\.r4lrgx\\vscode\\stickers\\sticker.png",
+ // "doki.sticker.path": "C:\\.r4lrgx\\vscode\\theme\\sticker.png",
  "doki.statusbar.name": "⚡ Code in less time ☕",
 
  // GitHub Actions
