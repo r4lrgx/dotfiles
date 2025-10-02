@@ -3,6 +3,18 @@
 
  // General
  //
+ // Window
+ "window.newWindowProfile": "Predeterminado",
+ "window.openFilesInNewWindow": "on",
+
+ // Workbench
+ "workbench.colorTheme": "01e61500-862c-41cd-b653-48d2ef7b1882",
+ "workbench.editor.enablePreview": false,
+ "workbench.editor.pinnedTabsOnSeparateRow": true,
+ "workbench.iconTheme": "material-icon-theme",
+ "workbench.sideBar.location": "left",
+ "workbench.startupEditor": "none",
+
  // Editor
  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
  "editor.unicodeHighlight.ambiguousCharacters": false,
@@ -32,76 +44,6 @@
  "editor.renderWhitespace": "boundary",
  "editor.renderControlCharacters": false,
 
- // Window
- "window.newWindowProfile": "Predeterminado",
- "window.openFilesInNewWindow": "on",
-
- // Explorer
- "explorer.compactFolders": false,
-
- // Security
- "security.allowedUNCHosts": ["wsl.localhost"],
- "security.workspace.trust.untrustedFiles": "open",
-
- // Formatting
- "[css]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
- "[html]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
- "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
- "[javascriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
- "[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
- "[json5]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
- "[jsonc]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
- "[jsonl]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
- "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
- "[typescriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
- "[yaml]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
- "[go]": { "editor.defaultFormatter": "golang.go" },
-
- // Langs
- //
- // Typescript Server
- "typescript.tsserver.experimental.enableProjectDiagnostics": false,
- "typescript.tsserver.log": "off",
- "typescript.tsserver.maxTsServerMemory": 2048,
- "typescript.tsserver.watchOptions": {
-  "watchDirectory": "useFsEvents",
-  "watchFile": "useFsEvents"
- },
-
- // Typescript and Javascript
- "javascript.inlayHints.functionLikeReturnTypes.enabled": false,
- "javascript.inlayHints.parameterNames.enabled": "none",
- "javascript.inlayHints.variableTypes.enabled": false,
- "javascript.preferences.useAliasesForRenames": false,
- "javascript.suggest.autoImports": true,
- "javascript.updateImportsOnFileMove.enabled": "never",
-
- "typescript.inlayHints.enumMemberValues.enabled": true,
- "typescript.inlayHints.functionLikeReturnTypes.enabled": false,
- "typescript.inlayHints.parameterNames.enabled": "none",
- "typescript.inlayHints.variableTypes.enabled": false,
- "typescript.preferences.useAliasesForRenames": false,
- "typescript.suggest.autoImports": true,
- "typescript.updateImportsOnFileMove.enabled": "never",
-
- // Go
- "go.formatTool": "goimports",
- "go.inlayHints.functionTypeParameters": true,
- "go.inlayHints.parameterNames": true,
- "go.lintOnSave": "package",
- "go.lintTool": "golangci-lint",
- "go.testOnSave": false,
- "go.useLanguageServer": true,
-
- // Productivity
- //
- // Git
- "git.autofetch": true,
- "git.confirmSync": false,
- "git.enableSmartCommit": true,
- "git.ignoreMissingGitWarning": true,
- "git.pullBeforeCheckout": true,
-
  // Files
  "files.insertFinalNewline": true,
  "files.trimTrailingWhitespace": true,
@@ -119,6 +61,8 @@
   "**/out/**": true
  },
 
+ // Productivity
+ //
  // Search
  "search.exclude": {
   "**/node_modules": true,
@@ -127,13 +71,8 @@
  },
  "search.quickOpen.includeSymbols": true,
 
- // Workbench
- "workbench.colorTheme": "01e61500-862c-41cd-b653-48d2ef7b1882",
- "workbench.editor.enablePreview": false,
- "workbench.editor.pinnedTabsOnSeparateRow": true,
- "workbench.iconTheme": "material-icon-theme",
- "workbench.sideBar.location": "left",
- "workbench.startupEditor": "none",
+ // Explorer
+ "explorer.compactFolders": false,
 
  // Terminal
  "terminal.integrated.cursorStyle": "line",
@@ -146,6 +85,83 @@
  "debug.inlineValues": "on",
  "debug.openDebug": "neverOpen",
 
+ // Security
+ "security.workspace.trust.untrustedFiles": "open",
+
+ // Git
+ "git.autofetch": true,
+ "git.confirmSync": false,
+ "git.enableSmartCommit": true,
+ "git.ignoreMissingGitWarning": true,
+ "git.pullBeforeCheckout": true,
+
+ // Langs
+ //
+ // Typescript and Javascript
+ "javascript.inlayHints.functionLikeReturnTypes.enabled": false,
+ "javascript.inlayHints.parameterNames.enabled": "none",
+ "javascript.inlayHints.variableTypes.enabled": false,
+ "javascript.preferences.useAliasesForRenames": false,
+ "javascript.suggest.autoImports": true,
+ "javascript.updateImportsOnFileMove.enabled": "never",
+
+ "typescript.inlayHints.enumMemberValues.enabled": true,
+ "typescript.inlayHints.functionLikeReturnTypes.enabled": false,
+ "typescript.inlayHints.parameterNames.enabled": "none",
+ "typescript.inlayHints.variableTypes.enabled": false,
+ "typescript.preferences.useAliasesForRenames": false,
+ "typescript.suggest.autoImports": true,
+ "typescript.updateImportsOnFileMove.enabled": "never",
+
+ // TSServer
+ "typescript.tsserver.experimental.enableProjectDiagnostics": false,
+ "typescript.tsserver.log": "off",
+ "typescript.tsserver.maxTsServerMemory": 2048,
+ "typescript.tsserver.watchOptions": {
+  "watchDirectory": "useFsEvents",
+  "watchFile": "useFsEvents"
+ },
+
+ // Go
+ "go.formatTool": "goimports",
+ "go.inlayHints.functionTypeParameters": true,
+ "go.inlayHints.parameterNames": true,
+ "go.lintOnSave": "package",
+ "go.lintTool": "golangci-lint",
+ "go.testOnSave": false,
+ "go.useLanguageServer": true,
+
+ // Formatters
+ "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+ "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+ "[javascriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+ "[typescriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+ "[html]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+ "[css]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+ "[scss]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+ "[less]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+ "[sass]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+ "[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+ "[jsonc]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+ "[json5]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+ "[markdown]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+ "[mdx]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+ "[yaml]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+ "[yml]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+ "[graphql]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+ "[gritqL]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+ "[vue]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+ "[angular-html]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+ "[svelte]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+ "[astro]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+ "[php]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+ "[xml]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+ "[handlebars]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+ "[dockerfile]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+ "[ini]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+ "[toml]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+ "[go]": { "editor.defaultFormatter": "golang.go" },
+
  // Extensions
  //
  // VScord
@@ -153,14 +169,14 @@
  "vscord.status.buttons.button1.git.active.url": "https://github.com/r4lrgx",
  "vscord.status.buttons.button1.git.idle.url": "https://github.com/r4lrgx",
  "vscord.status.buttons.button1.git.inactive.url": "https://github.com/r4lrgx",
- "vscord.status.details.text.debugging": "🔧 Debugging {file_name}{file_extension}",
+ "vscord.status.details.text.debugging": "🐛 Debugging {file_name}{file_extension}",
  "vscord.status.details.text.editing": "📂 In .r4lrgx {problems}",
  "vscord.status.details.text.idle": "💤 Idling",
  "vscord.status.details.text.noWorkSpaceText": "📂 no workspace",
  "vscord.status.details.text.notInFile": "🪦 Not in a file!",
  "vscord.status.details.text.viewing": "📂 In .r4lrgx {problems}",
  "vscord.status.idle.timeout": 500,
- "vscord.status.image.large.debugging.text": "🔧 Debugging a {LANG} file",
+ "vscord.status.image.large.debugging.text": "🐛 Debugging a {LANG} file",
  "vscord.status.image.large.editing.text": "📄 Editing a {LANG} file",
  "vscord.status.image.large.idle.text": "💤 Idling",
  "vscord.status.image.large.viewing.text": "👀 Viewing a {LANG} file",
@@ -172,7 +188,7 @@
  "vscord.status.image.small.viewing.key": "https://raw.githubusercontent.com/LeonardSSH/vscord/main/assets/icons/vscode-insiders.png",
  "vscord.status.image.small.viewing.text": "⌨️ {app_name}",
  "vscord.status.problems.text": "- 🕷️ {problems_count} problems found",
- "vscord.status.state.text.debugging": "🔧 Debugging: .r4lrgx",
+ "vscord.status.state.text.debugging": "🐛 Debugging: .r4lrgx",
  "vscord.status.state.text.editing": "📄 Working on {file_name}{file_extension}:{current_line}:{current_column}",
  "vscord.status.state.text.noWorkspaceFound": "📂 No workspace.",
  "vscord.status.state.text.viewing": "📄 Viewing {file_name}{file_extension}",
@@ -226,21 +242,25 @@
  "path-intellisense.autoSlashAfterDirectory": true,
  "path-intellisense.showHiddenFiles": true,
 
+ // Biome (Enabled only for linter, not for formatting.)
+ "biome.enabled": true,
+
  // Prettier
- "prettier.arrowParens": "always",
- "prettier.bracketSameLine": false,
- "prettier.bracketSpacing": true,
- "prettier.embeddedLanguageFormatting": "auto",
- "prettier.htmlWhitespaceSensitivity": "css",
- "prettier.jsxSingleQuote": false,
- "prettier.printWidth": 500000,
- "prettier.proseWrap": "preserve",
- "prettier.quoteProps": "as-needed",
- "prettier.semi": true,
- "prettier.singleAttributePerLine": true,
- "prettier.singleQuote": true,
+ "prettier.printWidth": 320,
  "prettier.tabWidth": 1,
- "prettier.trailingComma": "es5",
  "prettier.useTabs": false,
- "prettier.vueIndentScriptAndStyle": false
+ "prettier.semi": true,
+ "prettier.singleQuote": true,
+ "prettier.requirePragma": false,
+ "prettier.jsxSingleQuote": false,
+ "prettier.quoteProps": "as-needed",
+ "prettier.trailingComma": "all",
+ "prettier.bracketSpacing": true,
+ "prettier.bracketSameLine": true,
+ "prettier.arrowParens": "avoid",
+ "prettier.singleAttributePerLine": false,
+ "prettier.htmlWhitespaceSensitivity": "css",
+ "prettier.proseWrap": "preserve",
+ "prettier.endOfLine": "lf",
+ "prettier.embeddedLanguageFormatting": "auto"
 }
